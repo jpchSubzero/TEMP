@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+</head>
+<body>
+    <div class="scaleable-wrapper" id="scaleable-wrapper">
+        <div class="very-specific-design" id="very-specific-design">
+
+            <nav class="navbar-dark bg-utpl">
+                <a class="marg-logo cursor-default" href="javascript:void(0)">
+                    <img src="~/Content/img/utpl-alumnos.png" class="img-utpl-logo" alt="logo UTPL">
+                </a>
+                @Html.Partial("_LoginPartial")
+                <div id="areas">
+                </div>
+            </nav>
+
+            <div class="container-custom">
+                <div class=" body-content">
+                    @Html.Partial("_SubHeader")
+                    @RenderBody()
+                </div>
+            </div>
+
+            @Scripts.Render("~/bundles/bootstrap")
+            @RenderSection("scripts", required: false)
+        </div>
+    </div>
+
+    <!-- Modals  -->
+    @{
+        Html.RenderAction("ExtraContent");
+    }
+
+    <div class="page-footer">
+    </div>
+
+</body>
+</html>

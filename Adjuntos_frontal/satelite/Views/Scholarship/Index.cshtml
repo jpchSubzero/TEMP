@@ -1,0 +1,52 @@
+﻿
+@{
+    ViewData["Title"] = ViewBag.subTitulo;
+
+
+    var limitSizeFileName = Convert.ToString(ViewBag.limitSizeFileName)
+        .Replace("\\", "\\\\")
+        .Replace("'", "\\'");
+
+    var limitSizeFile = Convert.ToInt32(ViewBag.limitSizeFileNumber);
+}
+
+<script>
+    var limitSizeFileValue = '@(limitSizeFile)';
+    var limitSizeFileNameValue = '@(limitSizeFileName)';
+</script>
+
+<div id="load-request">
+        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+        <p id="load-text">Cargando...</p>
+</div>
+
+<div id="pagebody" class="level4 row"  style="display:none;">
+    <div>
+        <h5 id="nomb_beca">  </h5>
+        <br />
+        <p class="text-body-table">
+            <b>Nota:</b> Los requisitos marcados con el símbolo <b>"*"</b> son obligatorios.
+        </p>
+
+    </div>
+    <table class="table table-sm" id="schola-ship-table">
+        <thead class="thead-blue-utpl">
+            <tr>
+                <th style="width: 3%" class="text-center" scope="col">#</th>
+                <th style="width: 41%" scope="col">Requisitos</th>
+                <th style="width: 36%" scope="col">Observaciones</th>
+                <th style="width: 10%" scope="col">Estado</th>
+                <th style="width: 10%" scope="col">Ver/Adjutar</th>
+            </tr>
+        </thead>
+        <tbody id="tb-rows-request"></tbody>
+    </table>
+
+
+
+
+</div>
+
+
+
+

@@ -1,0 +1,510 @@
+﻿@media screen and (max-width: 992px) {
+    .nav-hide {
+        display: none;
+    }
+}
+
+.img-utpl-logo {
+    width: auto;
+    height: auto;
+    position: relative;
+    float: left;
+    left: 18px;
+    top: 19px;
+}
+
+
+
+#areas {
+    position: relative;
+    top: 38px;
+    clear: both;
+    width: 100%;
+    z-index: 1000;
+    background: #EBC100;
+    height: 5px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    margin: 0px 30px 30px 30px;
+}
+
+
+/*  seccinod emenu  */
+#navigationcontrolSmall {
+    display: block;
+    left: 30px;
+    margin-bottom: 5px;
+    margin-left: 0;
+    right: 230px;
+    z-index: 990;
+}
+
+.cursor-default{
+    cursor: default;
+}
+
+
+#navigationcontrolSmall span.menuItemSeperator {
+    float: left;
+    background: transparent url("img/1x1-grey.png") repeat-y scroll center center;
+    display: block;
+    height: 12px;
+    margin-top: 8px;
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 1px;
+}
+
+
+#navigationcontrolSmall span {
+    position: relative;
+    cursor: default;
+}
+
+
+.navArrowLeftSmallDisabled {
+    background: url(img/ssb-nav-arrow-sprites.png) no-repeat 0px 0px;
+    width: 9px;
+    height: 16px;
+}
+
+.navArrowRightSmallDisabled {
+    background: url("img/ssb-nav-arrow-sprites.png") no-repeat 0px -16px;
+    width: 9px;
+    height: 16px;
+}
+
+.navArrowLeftSmall {
+    width: 9px;
+    height: 16px;
+    top: 3px;
+    float: left;
+    margin-top: 4px;
+}
+
+.navArrowRightSmall {
+    width: 9px;
+    height: 16px;
+    float: left;
+    top: 3px;
+    margin-top: 4px;
+    margin-left: 5px;
+    margin-right: 4px;
+}
+
+/*@media screen and (min-width: 576px) {
+    .marg-logo {
+        margin-left: 9rem !important;
+    }    
+}*/
+
+#formCargArch {
+    min-width: 50%;
+}
+
+@media screen and (max-width: 576px) {
+    
+
+    #formCargArch {
+        min-width: 90%;
+    }
+}
+
+
+
+#menuTrackInst{
+    display:flex;
+    margin-top: 1px;
+}
+
+.menuitem a {
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 1px;
+    color: #369 !important;
+    padding-left: 7px;
+    padding-right: 7px;
+    font-size: 0.8em;
+    text-decoration: none;
+    height: 20px;
+    padding-top: 2px;
+    font-size: 13.3px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.menuitem a:hover {
+    background-color: #ddeffa;
+    border: 1px solid #a4d7f7;
+    border-radius: 5px;
+}
+
+
+.bg-utpl {
+    height: 102px;
+    background-color: rgb(0, 65, 111);
+   /* margin-top: 18px;*/
+}
+
+
+.mr-6, .mx-6 {
+    margin-right: 8rem !important;
+}
+
+
+#pagetitle {
+    float: left;
+    color: #646464;
+    font-size: 23.7px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    letter-spacing: 0.08em;
+    padding: 0;
+    margin: 1px 0 5px 0;
+    min-width: 55%;
+}
+
+#name-student {
+    float: right;
+    text-transform: capitalize;
+    text-align: end;
+    font-size: 11.8px;
+    line-height: 11pt;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 0px;
+    margin-top: 25px;
+}
+
+.text-white-import a {
+    color: #fff !important;
+}
+
+#pagebody.level4 {
+    min-width: 100%;
+    width: auto;
+    margin: 0rem 0rem 3rem 0rem;
+}
+
+
+#pagebody {
+    min-height: 300px;
+    padding: 25px;
+    top: -5px;
+    background: #fff url("img/content-bg-tc-dark.png") repeat-x left top;
+    border: 1px #e5ebee solid;
+    border-top-width: 0px;
+    float: left;
+    min-width: 911px;
+    width: 100%;
+    margin: 29px 0 0;
+}
+
+
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+
+
+label.custom-file-label {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-family: Verdana,Arial Narrow, helvetica, sans-serif;
+    font-size: 14px;
+}
+
+label.custom-file-label::after {
+    content: "Buscar";
+}
+
+
+button {
+    font: normal 100% Arial, Helvetica, sans-serif;
+}
+
+
+.utpl-btn {
+    -webkit-appearance: button;
+    -webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;    
+    font: 400 13.3333px Arial;
+    border-style: outset;
+    border-color: buttonface;
+    border-image: initial;
+    font-size: 0.80em;
+    font-weight: bold;
+    background: url("img/default-button-sprites-small.png") repeat-x 0px -22px;
+    padding: 3px 10px 3px 10px;
+}
+
+
+#utpl-btn:hover {
+    background: url("img/default-button-sprites-small.png") repeat-x 0px -66px;
+}
+
+
+.invalid-feedback-utpl {
+    width: 100%;
+    margin-top: 0.25rem;
+    font-size: 80%;
+    color: #dc3545;
+}
+
+
+.spinner-border {
+    width: 1.2rem !important;
+    height: 1.2rem !important;
+}
+
+
+.navbar-light .navbar-toggler {
+    border-color: rgba(0, 0, 0, 0) !important;
+}
+
+.navbar-dark .navbar-toggler {
+    border-color: rgba(0, 0, 0, 0) !important;
+}
+
+
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+
+#loginLink{
+    color:white;
+}
+
+#loginNav {
+    align-items: flex-end;
+    margin-right: 25px;
+    padding-top: 20px;
+    font-size: 12.6px;
+    align-items: flex-end;
+    display: -webkit-inline-box;
+    float: right;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#loginNav li a {
+    text-decoration: none;
+}
+
+    #loginNav li {
+        padding: 0px 8px 0px 0px;
+    }
+
+#logOutLink {
+    padding-left: 24px;
+    background: url("img/icon-lock.png") 10px center no-repeat;
+}
+
+#helpText {
+    padding-left: 24px;
+    color: rgb(255, 255, 255);   
+    border-left: 1px solid rgb(255, 255, 255);
+    background: url("img/icon-help.png") 8px center no-repeat;
+}
+
+.desc_adju {
+    font-family: Verdana,Arial Narrow, helvetica, sans-serif;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+
+.sub_menu_servicio {
+    padding: 0;
+    margin: 0px 0 0px 0;
+    display: flex;
+    margin-bottom: 6px;
+}
+
+
+.breadCrumb.hasBackURL {
+    display: flex;
+    border-left: 1px solid #CCC;
+    margin: 2px 0 0 15px;
+    padding: 0 0 0 9px;
+}
+
+.breadCrumb {
+    font-size: 0.89em;
+    float: left;
+    color: #666;
+}
+
+.breadCrumb a:link, .breadCrumb a:active, .breadCrumb a:visited {
+    padding-right: 6px;
+    padding-left: 6px;
+    text-decoration: none;
+    color: #369;
+    float: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12.6px;
+}
+
+.breadCrumb a:hover {
+    color: #c60;
+}
+
+.breadCrumb a.selected {
+    color: #333;
+    font-weight: bold;
+}
+
+.backurl a {
+    float: left;
+    background: url(img/backlink_sprites.png) no-repeat -21px top;
+    width: 19px;
+    height: 19px;
+}
+
+.backurl a:hover {
+    background: url(img/backlink_sprites.png) no-repeat -2px top;
+}
+
+
+.backurl {
+    margin-top: 2px;
+}
+
+.breadcrumbSeperator {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12.6px;
+}
+
+
+.page-footer {
+    background-color: rgb(0, 65, 111);
+    height: 25px;
+    width: 100%;
+    display: -webkit-box;
+    bottom: 0px;
+    left: 0px;
+    position: fixed;
+}
+
+
+@media screen and (max-width: 1350px) {
+    .scaleable-wrapper {
+        resize: both;
+    }
+
+
+    .very-specific-design {
+        width: 1350px;
+        height: auto;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }    
+}
+
+
+.table .thead-blue-utpl th {
+    color: #fff;
+    background-color: rgb(0, 65, 111);
+    border-color: rgb(0, 65, 111);
+    font-family: Verdana,Arial Narrow, helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+#schola-ship-table td {
+    border-color: #bfbfbf;
+}
+
+.nume-row {
+    font-weight: bold;
+}
+
+.quit-mg-top{
+    margin: unset !important;
+}
+
+.medium-icons {
+    font-size: 19px;
+    width: 25px;
+}
+
+.color-gey {
+    color: #6c757dbf !important;
+}
+
+.text-body-table{
+    font-size:13px;
+}
+
+
+.link-modal:hover, .link-modal:visited, .link-modal:link, .link-modal:active {
+    text-decoration: none;
+}
+
+.modal {
+    overflow: auto !important;
+}
+
+.modal-bg-header {
+    color: white;
+    background: rgb(0, 65, 111);
+    font-family: Verdana,Arial Narrow, helvetica, sans-serif;
+}
+
+.modal-title-utpl {
+    font-weight: bold;
+    font-family: Verdana,Arial Narrow, helvetica, sans-serif;
+}
+
+.utpl-advi-text {
+    font-family: Verdana,Arial Narrow, helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.text-danger-utpl {
+    color: #ea3d4dc7 !important;
+}
+
+.error-mesg {
+    margin-top: 20px;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.img-utpl-error {
+    max-width: 150px;
+    margin-bottom: 10px;
+}
+#nomb_beca{
+    height: 10px !important;
+    max-height: 10px !important;
+}
+
+
+#load-request {
+    position: absolute;
+    margin-left: 43%;
+    text-align: center;
+    margin-top: 75px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #6c757d !important;
+}
+
+#load-text {
+    display: contents;
+    font-size: 20px;
+}

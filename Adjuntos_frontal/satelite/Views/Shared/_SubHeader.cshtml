@@ -1,0 +1,67 @@
+﻿<div class="row">
+    <div class="col">
+        <div id="navigationcontrolSmall">
+            <span class="navArrowLeftSmall navArrowLeftSmallDisabled" style="cursor: default;"></span>
+            <span class="navArrowRightSmall navArrowRightSmallDisabled" style="cursor: default;"></span>
+            <span class="menucontainer">
+                <span id="menuTrackInst" class="menutrack">
+                    <span class="menuitem">
+                        <div class="menuSmall">
+                            <a href="@ViewBag.ambiente@ViewBag.infoEstu">Información personal</a>
+                        </div>
+                    </span>
+                    <span class="menuItemSeperator"></span>
+                    <span class="menuitem">
+                        <div class="menuSmall menuSmallHighlight">
+                            <a href="@ViewBag.ambiente@ViewBag.alumnos">Alumnos</a>
+                        </div>
+                    </span>
+                    <span class="menuItemSeperator"></span>
+                    <span class="menuitem">
+                        <div class="menuSmall">
+                            <a href="@ViewBag.ambiente@ViewBag.becasMatr">Becas y Ayudas Estudiantiles</a>
+                        </div>
+                    </span>
+                    <span class="menuItemSeperator"></span>
+                    <span class="menuitem">
+                        <div class="menuSmall menuSmallHighlight">
+                            <a href="@ViewBag.ambiente@ViewBag.servEstu">Servicios</a>
+                        </div>
+                    </span>
+                    <span class="menuItemSeperator"></span>
+                    <span class="menuitem">
+                        <div class="menuSmall menuSmallHighlight">
+                            <a href="@ViewBag.ambiente@ViewBag.prosEstu">Prospectos</a>
+                        </div>
+                    </span>
+                </span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-9">
+        <div class="col-lg-12" id="pagetitle">
+            @ViewBag.subTitulo
+        </div>
+        <div class="col-lg-12 sub_menu_servicio">
+            <div class="backurl">
+                <a href="@ViewBag.ambiente@ViewBag.inicio" title="REGRESAR A MENÚ"></a>
+            </div>
+            <div class="breadCrumb hasBackURL">
+                <a href="@ViewBag.ambiente@ViewBag.inicio" class="">Inicio</a>
+                <div class="breadcrumbSeperator">&gt;</div>
+                <a href="javascript:void(0)" class="selected" style="cursor: default;">@ViewBag.subTitulo</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3">
+        <p id="name-student">
+            @if (User.Identity.Name != null)
+            {
+                @User.Identity.Name.ToUpper() <br> @ViewBag.date
+            }
+        </p>
+    </div>
+</div>

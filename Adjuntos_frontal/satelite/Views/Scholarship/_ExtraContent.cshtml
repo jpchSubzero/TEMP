@@ -1,0 +1,47 @@
+﻿<!-- Modal carga de adjunto en Scholarship -->
+
+<div class="modal fade" id="uploadFile" tabindex="-1" role="dialog" aria-labelledby="uploadFileLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header modal-bg-header">
+                <h5 class="modal-title modal-title-utpl" id="uploadFileLabel">Adjuntar requisito</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" class="text-white">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="formCargArch" enctype="multipart/form-data">
+                    <div class="d-none">
+                        <div class="form-group">
+                            <label for="request_code">Código del requisto</label>
+                            <input type="text" class="form-control" name="request_code" value="" id="request_code" aria-describedby="helpId" placeholder="">
+                        </div>
+                    </div>
+                    <div class="desc_adju mb-3">
+                        <b>Tamaño maximo:</b> @ViewBag.limitSizeFileName <br>
+                        <b>Formatos:</b> @ViewBag.docuBeca <br>
+                        <b>Número de archivos:</b> uno por requisito. <br>
+                        <p id="req-name">Requisito: </p>
+                    </div>
+                    <div class="form-group">
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" name="file" id="file">
+                            <label class="custom-file-label" for="file" id="name-file">Seleccionar archivo (@ViewBag.docuBeca)</label>
+                            <div class="invalid-feedback-utpl" id="error_text"></div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <div class="spinner-border text-secondary d-none" id="loaderUploadFile" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
+                <button type="submit" class="btn btn-primary utpl-btn" id="btn-send-utpl" onclick="UploadFileUser()">Enviar</button>
+                <button type="submit" class="btn btn-primary utpl-btn" data-dismiss="modal">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@Scripts.Render("~/bundles/scholarship")

@@ -1,0 +1,33 @@
+﻿@using System.Configuration;
+@using satelite.Controllers;
+@{
+    ViewData["Title"] = "Error";
+    DocumentHelper DocumentHelper = new DocumentHelper();
+
+
+    ViewBag.date = DocumentHelper.ObtenerFecha();
+    ViewBag.ambiente = ConfigurationManager.AppSettings["ida:Ambient"];
+    ViewBag.infoEstu = ConfigurationManager.AppSettings["ida:InfoEstu"];
+    ViewBag.alumnos = ConfigurationManager.AppSettings["ida:Alumnos"];
+    ViewBag.becasMatr = ConfigurationManager.AppSettings["ida:BecasMatr"];
+    ViewBag.servEstu = ConfigurationManager.AppSettings["ida:ServEstu"];
+    ViewBag.reviSoliReal = ConfigurationManager.AppSettings["ida:ReviSoliReal"];
+    ViewBag.inicio = ConfigurationManager.AppSettings["ida:InicoOSS"];
+    ViewBag.doimio = ConfigurationManager.AppSettings["ida:Wtrealm"];
+    ViewData["subTitulo"] = "Error";
+    ViewBag.salir = "Account/SignOut";
+    ViewBag.drawTabl = false;
+
+}
+
+
+<div id="pagebody" class="level4 row">
+    <div class="text-center error-mesg" >
+        <img src="~/Content/img/error.png" class="img-utpl-error" alt="Error UTPL">
+        <br>
+        <p>
+            Lo sentimos, algo salio mal con la información que queriamos mostrarte, <br>
+            por favor intentalo de nuevo más tarde.
+        </p>
+    </div>
+</div>

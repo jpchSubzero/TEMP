@@ -1,0 +1,19 @@
+﻿@if (Request.IsAuthenticated)
+{
+    <text>
+        <ul class="nav navbar-nav navbar-right" id="loginNav">
+            <li class="text-white-import">
+                <a href="@ViewBag.doimio@ViewBag.salir " id="logOutLink">Firme hacia fuera</a>
+            </li>
+            <li>
+                <a class="helpText pointer" id="helpText" href="javascript:void(0)">Ayuda</a>
+            </li>
+        </ul>
+    </text>
+}
+else
+{
+    <ul class="nav navbar-nav navbar-right" id="loginNav">
+        <li>@Html.ActionLink("Ingresar", "SignIn", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+    </ul>
+}
