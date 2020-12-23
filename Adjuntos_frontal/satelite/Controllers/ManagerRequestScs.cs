@@ -222,8 +222,6 @@ namespace satelite.Controllers
             metadata.Add("Treq_Code", requestCode.Trim());
             metadata.Add("Treq_Desc", requestDesc.Trim());
 
-            
-
             byte[] Bytes = new byte[file.InputStream.Length + 1];
             file.InputStream.Read(Bytes, 0, Bytes.Length);
             var fileContent = new ByteArrayContent(Bytes);
