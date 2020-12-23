@@ -74,6 +74,7 @@ namespace LeerMensajesActiveMQ.Remote_Services.ActiveMQ
                         using (MemoryStream ms = new MemoryStream())
                         {
                             int read;
+                            streamMessageRead.Reset();
                             while ((read = streamMessageRead.ReadBytes(buffer)) > 0)
                             {
                                 ms.Write(buffer, 0, read);
@@ -82,7 +83,15 @@ namespace LeerMensajesActiveMQ.Remote_Services.ActiveMQ
                             ms.Seek(0, SeekOrigin.Begin);
                             //Se invoca a la Api que sube el archivo a Sharepoint
                             var result = await _uploadFile.Upload(dataForm, ms.GetBuffer(), headers["_dfi_Name"]);
-                            Console.WriteLine($"Se ha ledido un archivo: {await result.Content.ReadAsStringAsync()}");
+                            if (result.IsSuccessStatusCode)
+                            {
+                                //var response =  result.Content.ReadAsStringAsync().Result;
+                                Console.WriteLine($"Se ha ledido un archivo y se ha subido a Sharepoint");
+                            }
+                            else
+                            {
+                                Console.WriteLine($"ha fallado la carga del archivo a sharepoint ");
+                            }
                         }
 
                     }
