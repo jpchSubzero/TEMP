@@ -6,6 +6,7 @@ using RestSharp;
 using Newtonsoft.Json;
 using satelite.Models;
 using log4net;
+using satelite.Common;
 
 namespace satelite.Controllers
 {
@@ -19,6 +20,7 @@ namespace satelite.Controllers
         /// <param name="file">Archivo a cargarse</param>
         public static void SetParametersRequest(RestRequest request, string requestData, HttpPostedFileBase file)
         {
+            const string Origin = "SER"; 
             string[] serviceData = requestData.Split('_');
             string pidm = serviceData[0];
             string numbServ = serviceData[1];
@@ -29,24 +31,23 @@ namespace satelite.Controllers
             metadata.Add("Pidm", pidm);
             metadata.Add("NumeroServicio", numbServ);
 
-            var json = JsonConvert.SerializeObject(metadata);
-
-            request.AddParameter("Origin", "SER");
-            request.AddParameter("Metadata", json);
-            //request.AddParameter("LibraryName", libraryName);
-            //request.AddParameter("DocumentType", contentType);
-
-            //request.AddParameter("Origin", "SER");
-            //request.AddParameter("Metadata", "{\"pidm\": \"2815\",\"service_number\": \"21758\"}");
-            //request.AddParameter("Webhook", "http://localhost:23224/api/webhooks/incoming/custom");
-
             byte[] Bytes = new byte[file.InputStream.Length + 1];
             file.InputStream.Read(Bytes, 0, Bytes.Length);
             var fileContent = new ByteArrayContent(Bytes);
-            string filename = file.FileName;
+            string fileName = file.FileName;
+
+            string currentDate = Utils.GetCurrentDateTime();
+
+            metadata.Add("_nm_CurrentDate", currentDate);
+            metadata.Add("_nm_NameFile", fileName);
+
+            var json = JsonConvert.SerializeObject(metadata);
+
+            request.AddParameter("Origin", Origin);
+            request.AddParameter("Metadata", json);
 
             request.AlwaysMultipartFormData = true;
-            request.AddFile("File", Bytes, filename, file.ContentType);
+            request.AddFile("File", Bytes, fileName, file.ContentType);
         }
 
 

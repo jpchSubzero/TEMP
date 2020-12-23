@@ -7,7 +7,7 @@ using Newtonsoft.Json;
 using satelite.Models;
 using log4net;
 using System.Threading.Tasks;
-
+using satelite.Common;
 
 namespace satelite.Controllers
 {
@@ -208,20 +208,7 @@ namespace satelite.Controllers
                 requestCode = httpContext.Request.Params.Get("requestCode"),
                 requestDesc = httpContext.Request.Params.Get("requestDesc");
 
-            //request.AddParameter("Pidm", pidm);
-            //request.AddParameter("ScholarshipCode", scholarSchip.Trim());
-            //request.AddParameter("ScholarshipDesc", scholarShipName.Trim());
-            //request.AddParameter("LibraryName", libraryName);
-            //request.AddParameter("ContentType", contentType);
-            //request.AddParameter("HelpPeriod", period.Trim());
-            //request.AddParameter("Year", year);
-            //request.AddParameter("RequirementCode", requestCode.Trim());
-            //request.AddParameter("RequirementDesc", requestDesc.Trim());
-            //request.AddParameter("Cedula", dni.Trim());
-            //request.AddParameter("Origin", origin.Trim());
-            //request.AddParameter("Env", env.Trim());
-            //request.AddParameter("FoundCode", scholarshipFundValue.Trim());
-            //request.AddParameter("StudentName", studentName.Trim());
+            
 
             Dictionary<string, string> metadata = new Dictionary<string, string>();
             metadata.Add("Pidm", pidm.ToString());
@@ -235,19 +222,27 @@ namespace satelite.Controllers
             metadata.Add("Treq_Code", requestCode.Trim());
             metadata.Add("Treq_Desc", requestDesc.Trim());
 
+            
+
+            byte[] Bytes = new byte[file.InputStream.Length + 1];
+            file.InputStream.Read(Bytes, 0, Bytes.Length);
+            var fileContent = new ByteArrayContent(Bytes);
+            string fileName = file.FileName;
+
+            string currentDate = Utils.GetCurrentDateTime();
+            //fileName = Utils.CleanFileName(fileName);
+
+            metadata.Add("_nm_CurrentDate", currentDate);
+            metadata.Add("_nm_NameFile", fileName);
+
             var json = JsonConvert.SerializeObject(metadata);
 
             request.AddParameter("Origin", origin.Trim());
             request.AddParameter("Metadata", json);
             request.AddParameter("Env", env.Trim());
 
-            byte[] Bytes = new byte[file.InputStream.Length + 1];
-            file.InputStream.Read(Bytes, 0, Bytes.Length);
-            var fileContent = new ByteArrayContent(Bytes);
-            string filename = file.FileName;
-
             request.AlwaysMultipartFormData = true;
-            request.AddFile("File", Bytes, filename, file.ContentType);
+            request.AddFile("File", Bytes, fileName, file.ContentType);
             request.Timeout = 50000;
         }
 
