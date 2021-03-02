@@ -1,0 +1,24 @@
+<div *ngIf="!name" class="row">
+  <div class="col">
+    <h4>Usuario no logueado</h4>
+    <button class="btn btn-primary" (click)="login()">Login</button>
+  </div>
+</div>
+<div *ngIf="name" class="row">
+  <div class="col">
+    <h4>Bienvenido, {{name}}</h4>
+    <button class="btn btn-primary" (click)="logoff()">Logout</button>
+  </div>
+</div>
+<br />
+<div class="row">
+  <div class="col">
+    <div>
+      <h4>{{message}}</h4>
+    </div>
+    <div>
+      <button *ngIf="name" class="btn btn-secondary mr-4" (click)="getPrivateAreaMessage()">Acción Privada</button>
+      <button class="btn btn-secondary" (click)="getPublicAreaMessage()">Acción Pública</button>
+    </div>
+  </div>
+</div>
