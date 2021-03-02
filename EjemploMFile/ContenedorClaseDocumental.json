@@ -1,0 +1,36 @@
+﻿//api/Contenido/ContenedorClase?idClase=71
+{
+  "Estado": "OK",
+  "Datos": {
+    "NombreTipoObjeto": "Documento",
+    "IdTipoObjeto": 0,
+    "NombreClase": "Prestador Documentos",
+    "IdClase": 71,
+    "Propiedades": [
+      {
+        "Id": 1102,
+        "Nombre": "Prestador",
+        "TipoDato": "MultiSelectLookup",
+        "EsRequerida": true,
+        "UsaListaValores": true,
+        "IdListaValor": 108,
+        "UsaMultiplesValores": true,
+        "Valores": [
+          {
+            "Id": 3,
+            "Nombre": "Veris"
+          },
+          {
+            "Id": 4,
+            "Nombre": "Veris"
+          },
+          {
+            "Id": 5,
+            "Nombre": "Veris"
+          }
+        ]
+      }
+    ]
+  },
+  "Mensajes": []
+}

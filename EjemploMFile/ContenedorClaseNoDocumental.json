@@ -1,0 +1,92 @@
+﻿//api/Contenido/ContenedorClase?idClase=70
+{
+  "Estado": "OK",
+  "Datos": {
+    "NombreTipoObjeto": "Prestador",
+    "IdTipoObjeto": 108,
+    "NombreClase": "Prestador",
+    "IdClase": 70,
+    "Propiedades": [
+      {
+        "Id": 1105,
+        "Nombre": "Prestador Apellidos",
+        "TipoDato": "Text",
+        "EsRequerida": true,
+        "UsaListaValores": false,
+        "IdListaValor": 0,
+        "UsaMultiplesValores": false,
+        "Valores": null
+      },
+      {
+        "Id": 1104,
+        "Nombre": "Prestador Nombres",
+        "TipoDato": "Text",
+        "EsRequerida": true,
+        "UsaListaValores": false,
+        "IdListaValor": 0,
+        "UsaMultiplesValores": false,
+        "Valores": null
+      },
+      {
+        "Id": 1106,
+        "Nombre": "Prestador Número Convenio",
+        "TipoDato": "Integer",
+        "EsRequerida": true,
+        "UsaListaValores": false,
+        "IdListaValor": 0,
+        "UsaMultiplesValores": false,
+        "Valores": null
+      },
+      {
+        "Id": 1103,
+        "Nombre": "Prestador RUC",
+        "TipoDato": "Text",
+        "EsRequerida": true,
+        "UsaListaValores": false,
+        "IdListaValor": 0,
+        "UsaMultiplesValores": false,
+        "Valores": null
+      },
+      {
+        "Id": 1108,
+        "Nombre": "Prestador Tipo",
+        "TipoDato": "Lookup",
+        "EsRequerida": true,
+        "UsaListaValores": true,
+        "IdListaValor": 109,
+        "UsaMultiplesValores": false,
+        "Valores": [
+          {
+            "Id": 1,
+            "Nombre": "Centro Médico"
+          },
+          {
+            "Id": 2,
+            "Nombre": "Clínica / Hospital"
+          },
+          {
+            "Id": 3,
+            "Nombre": "Especial"
+          },
+          {
+            "Id": 4,
+            "Nombre": "Farmacia"
+          },
+          {
+            "Id": 5,
+            "Nombre": "Laboratorio Clínico"
+          },
+          {
+            "Id": 6,
+            "Nombre": "Laboratorio Imagen"
+          },
+          {
+            "Id": 7,
+            "Nombre": "Médico"
+          }
+        ]
+      }
+    ]
+  },
+  "Mensajes": []
+}
